@@ -10,6 +10,9 @@ const initState = {
 };
 
 function reducer(state, action) {
+  console.log(state);
+  console.log(action);
+
   switch (action.type) {
     case setAdd:
       return {

@@ -46,7 +46,7 @@ function TodoAdd() {
       level: "Nguy cấp",
     });
 
-    dispatch(actions.setAdd);
+    dispatch(actions.setAdd(itemTodo));
   }
 
   useEffect(() => {
