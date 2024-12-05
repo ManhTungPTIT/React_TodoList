@@ -3,8 +3,8 @@ import "./TodoList.scss";
 import TodoListContext from "../store/TodoContext";
 
 function TodoList() {
-  const { list } = useContext(TodoListContext);
-  console.log(list);
+  const [state, dispatch] = useContext(TodoListContext);
+  console.log(state);
 
   return (
     <div>

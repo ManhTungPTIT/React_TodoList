@@ -1,20 +1,22 @@
 import "./App.css";
 import TodoAdd from "./Component/TodoAdd";
-import TodoTitle from "./Component/TodoTitle";
 import TodoList from "./Component/TodoList";
 import Provider from "./Component/store/Provider";
+import TodoTitle from "./Component/TodoTitle";
 
 function App() {
-  <div className="App">
-    <TodoTitle />
+  return (
+    <div className="App">
+      <TodoTitle />
 
-    <div className="main">
-      <Provider>
-        <TodoAdd />
-        <TodoList />
-      </Provider>
+      <div className="main">
+        <Provider>
+          <TodoAdd />
+          <TodoList />
+        </Provider>
+      </div>
     </div>
-  </div>;
+  );
 }
 
 export default App;
