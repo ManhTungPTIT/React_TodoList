@@ -1,6 +1,70 @@
-table,
-th,
-td {
-  border: 1px solid black;
+.list {
+  width: 60%;
+}
+table {
+  width: 100%;
   border-collapse: collapse;
+  vertical-align: middle;
+  padding: 1rem;
+
+  td {
+    padding: 0.3rem 1rem;
+    text-align: center;
+    height: 2rem;
+    word-break: break-word;
+  }
+}
+thead {
+  background-color: #f5f0cd;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.tableTitle {
+  padding: 1 3rem;
+}
+.scope {
+  background-color: #f7f6ed;
+}
+.white {
+  background-color: white;
+}
+.Button {
+  display: flex;
+  justify-content: space-evenly;
+  button {
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    width: 4rem;
+    height: 2rem;
+    cursor: pointer;
+  }
+  .btUpdate {
+    background-color: rgb(255, 193, 7);
+  }
+  .btSave {
+    color: white;
+    background-color: green;
+  }
+  .btDelete {
+    background-color: red;
+    color: white;
+  }
+  .btCancel {
+    background-color: red;
+    color: white;
+  }
+}
+.inputLock {
+  font-size: 1rem;
+  padding-left: 0, 5rem;
+}
+.lockSelect {
+  border: none;
+  font-size: 1rem;
+  background-color: inherit;
+  appearance: none;
+  color: black;
+  border-radius: 5px;
 }

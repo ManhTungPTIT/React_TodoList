@@ -4,6 +4,7 @@ import TodoListContext from "../store/TodoContext";
 import { actions } from "../store/index";
 
 function TodoAdd() {
+  var itemTodo;
   const [state, dispatch] = useContext(TodoListContext);
   const [todo, setTodo] = useState([]);
   const [item, setItem] = useState({
@@ -30,13 +31,13 @@ function TodoAdd() {
   }
 
   function handleAdd() {
-    const itemTodo = {
+    itemTodo = {
       id: item.id + 1,
       job: item.job,
       level: item.level,
     };
 
-    state.TodoInput = { ...itemTodo };
+    state.todoInput = { ...itemTodo };
 
     setTodo([...todo, itemTodo]);
 
@@ -46,14 +47,14 @@ function TodoAdd() {
       level: "Nguy cấp",
     });
 
-    dispatch(actions.setAdd(itemTodo));
+    dispatch(actions.setAdd());
   }
 
-  useEffect(() => {
-    console.log("Noi dung", todo);
-  }, [todo]);
+  function handleCancel() {
+    dispatch(actions.setCancel());
+  }
 
-  function handleCancel() {}
+  useEffect(() => {}, [todo]);
 
   return (
     <div className="contain_TodoAdd">
