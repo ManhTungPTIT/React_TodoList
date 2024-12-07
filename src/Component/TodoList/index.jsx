@@ -21,9 +21,6 @@ function TodoList() {
   }
 
   function handleSave(id) {
-    console.log(editText);
-    console.log(editSelect);
-
     const itemUpdate = {
       id: item.id + 1,
       job: editText,
@@ -32,14 +29,23 @@ function TodoList() {
     // let todoUpdate = { ...itemTodo, ...itemUpdate };
 
     state.todoInput = { ...itemUpdate };
-
     dispatch(actions.setUpdate(itemUpdate));
     setUpdate(-1);
   }
 
-  function handleDelete() {}
+  function handleDelete(id) {
+    state.todoInput = {
+      id: id,
+      job: "",
+      level: "",
+    };
 
-  function handleCancel() {}
+    dispatch(actions.setDelete());
+  }
+
+  function handleCancel() {
+    dispatch(actions.setCancel());
+  }
 
   return (
     <div className="list">
@@ -133,7 +139,10 @@ function TodoList() {
                     </button>
                   </div>
                   <div>
-                    <button className="btDelete" onClick={handleDelete}>
+                    <button
+                      className="btDelete"
+                      onClick={() => handleDelete(item.id)}
+                    >
                       Xóa
                     </button>
                   </div>

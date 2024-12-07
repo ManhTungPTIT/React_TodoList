@@ -12,3 +12,8 @@ export const setCancel = (payload) => ({
   type: "CANCEL",
   payload,
 });
+
+export const setDelete = (payload) => ({
+  type: "DELETE_ITEM",
+  payload,
+});
